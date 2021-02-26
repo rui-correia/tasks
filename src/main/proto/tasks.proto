@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "braz.rui.tasks";
+option java_outer_classname = "Tasks";
+option objc_class_prefix = "HLW";
+
+package braz.rui.tasks;
+
+service TasksService {
+  rpc send (TasksRequest) returns (TasksReply) {}
+}
+
+message TasksRequest {
+  string name = 1;
+}
+
+message TasksReply {
+  string message = 1;
+}
